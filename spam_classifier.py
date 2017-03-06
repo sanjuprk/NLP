@@ -17,7 +17,7 @@ def init_lists(folder):
         f = open(folder + a_file, 'r')
         a_list.append(f.read())
     f.close()
-    return a_list   #  a_list contains the texts of every email
+    return a_list   #  a_list contains the text of every email
 
 #preprocessing the data
 def preprocess(sentence):
