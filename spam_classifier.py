@@ -7,7 +7,7 @@ from nltk import word_tokenize, WordNetLemmatizer
 from nltk.corpus import stopwords
 from nltk import NaiveBayesClassifier, classify
 
-stoplist = stopwords.words('english')   #  words like ['is','this','at'...etc] are not going to be useful during classification , these are callde stopwords
+stoplist = stopwords.words('english')   #  words like ['is','this','at'...etc] are not going to be useful during classification , these are called stopwords
 
 #loading the data
 def init_lists(folder):
@@ -17,11 +17,11 @@ def init_lists(folder):
         f = open(folder + a_file, 'r')
         a_list.append(f.read())
     f.close()
-    return a_list   #  a_list contains the texts of every emails
+    return a_list   #  a_list contains the text of every email
 
 #preprocessing the data
 def preprocess(sentence):
-    lemmatizer = WordNetLemmatizer()   # lemmatize is converting strings like 'multiplying' to 'multiply'
+    lemmatizer = WordNetLemmatizer()   # lemmatization is converting strings like 'multiplying' to 'multiply'
     return [lemmatizer.lemmatize(word.lower()) for word in word_tokenize(unicode(sentence, errors='ignore')) if not word in stoplist] # lemmatize, convert to lower case, tokenize and then remove the stopwords
 
 
