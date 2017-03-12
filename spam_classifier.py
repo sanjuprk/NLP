@@ -7,7 +7,11 @@ from nltk import word_tokenize, WordNetLemmatizer
 from nltk.corpus import stopwords
 from nltk import NaiveBayesClassifier, classify
 
+<<<<<<< HEAD
 stoplist = stopwords.words('english')   #  words like ['is','this','at'...etc] are not going to be useful during classification , these are called stopwords
+=======
+stoplist = stopwords.words('english')   #  words like ['is','this','at'...etc] are not going to be useful during classification
+>>>>>>> 0bc4e22cdedbb066d715cb2fdb3ac87a1ad2573a
 
 #loading the data
 def init_lists(folder):
