@@ -62,7 +62,7 @@ if __name__ == '__main__' :
     #print ('Corpus size = ' + str(len(all_emails)) + ' emails')
 
     # extract the features
-    all_features = [(get_features(email, ''), label) for (email, label) in all_emails]
+    all_features = [(get_features(email, 'bow'), label) for (email, label) in all_emails]
     #print ('Collected ' + str(len(all_features)) + ' feature sets')
 
     # train the classifier
