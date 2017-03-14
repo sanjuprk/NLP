@@ -7,11 +7,8 @@ from nltk import word_tokenize, WordNetLemmatizer
 from nltk.corpus import stopwords
 from nltk import NaiveBayesClassifier, classify
 
-<<<<<<< HEAD
-stoplist = stopwords.words('english')   #  words like ['is','this','at'...etc] are not going to be useful during classification , these are called stopwords
-=======
+
 stoplist = stopwords.words('english')   #  words like ['is','this','at'...etc] are not going to be useful during classification
->>>>>>> 0bc4e22cdedbb066d715cb2fdb3ac87a1ad2573a
 
 #loading the data
 def init_lists(folder):
@@ -64,9 +61,10 @@ if __name__ == '__main__' :
     all_emails += [(email, 'ham') for email in ham]
     random.shuffle(all_emails)
     #print ('Corpus size = ' + str(len(all_emails)) + ' emails')
-
+ 
     # extract the features
     all_features = [(get_features(email, 'bow'), label) for (email, label) in all_emails]
+    print(all_features[0])
     #print ('Collected ' + str(len(all_features)) + ' feature sets')
 
     # train the classifier
