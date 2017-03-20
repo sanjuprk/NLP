@@ -13,5 +13,4 @@ A dataset is taken for each of the above mentioned cases and classified mainly w
 ### ToDo's:
 
 Classification using advanced methods like :
-* Convolutional Neural Networks (CNN)
 * Word Embeddings (word2vec)
